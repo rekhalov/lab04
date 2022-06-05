@@ -29,14 +29,14 @@
 	<vector>
 	<math.h>
 
-1654426305 source:c:\users\user\desktop\lab03\histogram.cpp
+1654432623 source:c:\users\user\desktop\lab03\histogram.cpp
 	<iostream>
 	<vector>
 	<math.h>
 	"histogram.h"
 	<cassert>
 
-1654426305 c:\users\user\desktop\lab03\histogram.h
+1654432623 c:\users\user\desktop\lab03\histogram.h
 	<iostream>
 	<vector>
 	<math.h>
@@ -47,8 +47,15 @@
 	<math.h>
 	"svg.h"
 
-1654426305 c:\users\user\desktop\lab03\svg.h
+1654431389 c:\users\user\desktop\lab03\svg.h
 	<iostream>
 	<vector>
 	<math.h>
+
+1654432623 source:c:\users\user\desktop\lab03\main.cpp
+	<iostream>
+	<vector>
+	<math.h>
+	"histogram.h"
+	"svg.h"
 

@@ -24,16 +24,18 @@ void svg_rect(double x, double y, double width, double height, string stroke, st
     cout << "<rect x='"<< x <<"' y='"<< y <<"' width='"<< width <<"' height='"<< height <<"' stroke='"<< stroke <<"' fill='"<< fill <<"'></rect>\n";
 
 }
-void show_histogram_svg(const vector<size_t> bins, size_t height_bin) {
+void show_histogram_svg(const vector<size_t> bins)
+{
     const auto IMAGE_WIDTH = 400;
-    const auto IMAGE_HEIGHT = 700;
+    const auto IMAGE_HEIGHT = 300;
     const auto TEXT_LEFT = 20;
     const auto TEXT_BASELINE = 20;
     const auto TEXT_WIDTH = 50;
+    const auto BIN_HEIGHT = 30;
     const auto BLOCK_WIDTH = 10;
+
     const auto HISTOGRAM_MAX_WIDTH = IMAGE_WIDTH - TEXT_LEFT - TEXT_WIDTH;
     size_t max_bin = bins[0];
-    test_height(height_bin,bins.size(),IMAGE_HEIGHT);
     for (size_t bin : bins){
         if (max_bin < bin) max_bin = bin;
     }
@@ -45,16 +47,10 @@ void show_histogram_svg(const vector<size_t> bins, size_t height_bin) {
             height = HISTOGRAM_MAX_WIDTH * (static_cast<double> (bin) / (max_bin * BLOCK_WIDTH));
         }
         const double bin_width = BLOCK_WIDTH * height;
-        double font_size = height_bin/2;
-        svg_text(TEXT_LEFT, top + height_bin/2, to_string(bin), font_size);
-        svg_rect(TEXT_WIDTH + height_bin, top, bin_width, height_bin,"#474A51","#DC143C");
-        top += height_bin;
+        double font_size = BIN_HEIGHT/2;
+        svg_text(TEXT_LEFT, top + BIN_HEIGHT/2, to_string(bin), font_size);
+        svg_rect(TEXT_WIDTH + BIN_HEIGHT, top, bin_width, BIN_HEIGHT,"#474A51","#DC143C");
+        top += BIN_HEIGHT;
     }
     svg_end();
-}
-
-void test_height(size_t &height_bin,size_t bins_count, const size_t IMAGE_HEIGHT){
-    if (height_bin * bins_count > IMAGE_HEIGHT){
-            height_bin = (IMAGE_HEIGHT/bins_count);
-    }
 }

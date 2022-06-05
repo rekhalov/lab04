@@ -5,29 +5,30 @@
 #include "svg.h"
 using namespace std;
 
-vector<double> input_numbers(istream &in, size_t count)
-{
+vector<double> input_numbers(istream &in, size_t count) {
     vector<double> result(count);
     for (size_t i = 0; i < count; i++) {
         in >> result[i];
     }
     return result;
 }
-
-int main(){
-
+Input read_input(istream& in) {
+    Input data;
+    cerr << "Enter number count: ";
     size_t number_count;
-    cerr << "Enter number count:";
-    cin >> number_count;
-    cerr << "Enter numbers:";
-    const auto numbers = input_numbers(cin, number_count);
-    size_t bin_count;
-    cerr << "Enter bin count:";
-    cin >> bin_count;
-    size_t height_historgam;
-    cerr << "Enter height historgram:";
-    cin >> height_historgam;
-    const auto bins = make_histogram(numbers, bin_count);
-    show_histogram_svg(bins, height_historgam);
+    in >> number_count;
+    cerr << "Enter numbers: ";
+    data.numbers = input_numbers(in, number_count);
+    cerr << "Enter bin count: ";
+    in >> data.bin_count;
+    return data;
+}
+
+
+int main() {
+    Input data;
+    data = read_input(cin);
+    const auto bins = make_histogram(data);
+    show_histogram_svg(bins);
     return 0;
 }
