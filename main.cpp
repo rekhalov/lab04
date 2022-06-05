@@ -2,10 +2,11 @@
 #include <vector>
 #include <math.h>
 #include <curl/curl.h>
+#include <sstream>
+#include <string>
 #include "histogram.h"
 #include "svg.h"
 using namespace std;
-
 vector<double> input_numbers(istream &in, size_t count) {
     vector<double> result(count);
     for (size_t i = 0; i < count; i++) {
@@ -24,8 +25,6 @@ Input read_input(istream& in, bool prompt) {
     in >> data.bin_count;
     return data;
 }
-
-
 int main(int argc, char* argv[]) {
     curl_global_init(CURL_GLOBAL_ALL);
     if (argc > 1) {
@@ -47,5 +46,4 @@ int main(int argc, char* argv[]) {
     const auto bins = make_histogram(data);
     show_histogram_svg(bins);
     return 0;
-    return 0;
-}
+    }

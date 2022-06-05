@@ -41,22 +41,24 @@
 	<vector>
 	<math.h>
 
-1654432775 source:c:\users\user\desktop\lab03\svg.cpp
+1654452141 source:c:\users\user\desktop\lab03\svg.cpp
 	<iostream>
 	<vector>
 	<math.h>
 	"svg.h"
 
-1654431389 c:\users\user\desktop\lab03\svg.h
+1654452748 c:\users\user\desktop\lab03\svg.h
 	<iostream>
 	<vector>
 	<math.h>
 
-1654434593 source:c:\users\user\desktop\lab03\main.cpp
+1654451761 source:c:\users\user\desktop\lab03\main.cpp
 	<iostream>
 	<vector>
 	<math.h>
 	<curl/curl.h>
+	<sstream>
+	<string>
 	"histogram.h"
 	"svg.h"
 
