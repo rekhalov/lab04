@@ -4,6 +4,8 @@
 #include "histogram.h"
 #include <cassert>
 using namespace std;
+
+
 void find_minmax(vector<double> numbers, double& min, double& max) {
     min = numbers[0];
     max = numbers[0];
@@ -16,7 +18,6 @@ void find_minmax(vector<double> numbers, double& min, double& max) {
         if (max < number) max = number;
     }
 }
-
 vector<size_t> make_histogram(Input data){
     double min,max;
     find_minmax(data.numbers, min, max);
@@ -27,7 +28,7 @@ vector<size_t> make_histogram(Input data){
         for(size_t j = 0; j < (data.bin_count - 1) && !found; j++){
             auto lo = min +  j * bin_size;
             auto hi = min + (j + 1) * bin_size;
-           if ((lo <= data.numbers[i]) && (data.numbers[i] < hi)) {
+            if ((lo <= data.numbers[i]) && (data.numbers[i] < hi)) {
                 bins[j]++;
                 found = true;
             }
@@ -38,7 +39,6 @@ vector<size_t> make_histogram(Input data){
     }
     return bins;
 }
-
 void show_histogram_text(vector<size_t>bins){
     const size_t SCREEN_WIDTH = 80;
     const size_t MAX_ASTERISK = SCREEN_WIDTH - 3 - 1;
@@ -63,4 +63,3 @@ void show_histogram_text(vector<size_t>bins){
         cout << endl;
     }
 }
-

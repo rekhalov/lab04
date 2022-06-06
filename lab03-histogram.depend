@@ -29,36 +29,59 @@
 	<vector>
 	<math.h>
 
-1654432623 source:c:\users\user\desktop\lab03\histogram.cpp
+1654464560 D
+
+1654502207 source:c:\users\user\desktop\lab03\histogram.cpp
 	<iostream>
 	<vector>
 	<math.h>
 	"histogram.h"
 	<cassert>
 
-1654432623 c:\users\user\desktop\lab03\histogram.h
+1654500985 04-2
 	<iostream>
 	<vector>
 	<math.h>
-
-1654452141 source:c:\users\user\desktop\lab03\svg.cpp
+	"histogram.h"
+	<cassert>
+	<iostream>
+	<vector>
+	<math.h>
 	<iostream>
 	<vector>
 	<math.h>
 	"svg.h"
+	<iostream>
+	<vector>
+	<math.h>
+	<winsock2.h>
+	<windows.h>
 
-1654452748 c:\users\user\desktop\lab03\svg.h
+1654502195 c:\users\user\desktop\lab03\histogram.h
 	<iostream>
 	<vector>
 	<math.h>
 
-1654451761 source:c:\users\user\desktop\lab03\main.cpp
+1654503203 source:c:\users\user\desktop\lab03\svg.cpp
 	<iostream>
 	<vector>
 	<math.h>
+	"svg.h"
+	"histogram.h"
+
+1654502207 c:\users\user\desktop\lab03\svg.h
+	<iostream>
+	<vector>
+	<math.h>
+	<winsock2.h>
+	<windows.h>
+
+1654503139 source:c:\users\user\desktop\lab03\main.cpp
 	<curl/curl.h>
 	<sstream>
 	<string>
+	<winsock2.h>
+	<windows.h>
 	"histogram.h"
 	"svg.h"
 
