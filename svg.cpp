@@ -46,6 +46,7 @@ void show_histogram_svg(const vector<size_t> &bins, size_t height) {
     const auto TEXT_WIDTH = 50;
     const auto BLOCK_WIDTH = 10;
     const auto HISTOGRAM_MAX_WIDTH = IMAGE_WIDTH - TEXT_LEFT - TEXT_WIDTH;
+
     DWORD MinorVer, MajorVer, build;
     DWORD max_len = MAX_COMPUTERNAME_LENGTH + 1;
     char comp_name[max_len];
@@ -80,6 +81,6 @@ void show_histogram_svg(const vector<size_t> &bins, size_t height) {
 }
 void test_height(size_t &height,size_t bins_count, const size_t IMAGE_HEIGHT){
     if (height * bins_count > IMAGE_HEIGHT){
-            height = (IMAGE_HEIGHT/bins_count);
+            height = ((IMAGE_HEIGHT - 100)/bins_count);
     }
 }
