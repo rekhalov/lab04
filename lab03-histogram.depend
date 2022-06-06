@@ -52,11 +52,12 @@
 	<vector>
 	<math.h>
 
-1654464683 source:c:\users\user\desktop\lab03\main.cpp
+1654499279 source:c:\users\user\desktop\lab03\main.cpp
 	<iostream>
 	<vector>
 	<math.h>
 	<windows.h>
+	<winsock2.h>
 	"histogram.h"
 	"svg.h"
 
