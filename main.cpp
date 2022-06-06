@@ -18,23 +18,6 @@ vector<double> input_numbers(istream &in, size_t count)
 
 int main(){
 
-    DWORD info = GetVersion();
-    DWORD mask = 0x0000ffff;
-    DWORD version = info&mask;
-    DWORD platf = info >> 16;
-
-    DWORD MajorVer = version & 0x00ff;
-    DWORD MinorVer = version >> 8;
-
-     printf("Windows v%u.%u", MajorVer, MinorVer);
-    if ((info&0x4000'0000)==0){
-        DWORD build = platf;
-        printf("(build %u)\n", build);
-
-    }
-
-    return 0;
-
     size_t number_count;
     cerr << "Enter number count:";
     cin >> number_count;

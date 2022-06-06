@@ -47,12 +47,14 @@
 	<math.h>
 	"svg.h"
 
-1654464560 c:\users\user\desktop\lab03\svg.h
+1654500985 c:\users\user\desktop\lab03\svg.h
 	<iostream>
 	<vector>
 	<math.h>
+	<winsock2.h>
+	<windows.h>
 
-1654499279 source:c:\users\user\desktop\lab03\main.cpp
+1654500889 source:c:\users\user\desktop\lab03\main.cpp
 	<iostream>
 	<vector>
 	<math.h>
